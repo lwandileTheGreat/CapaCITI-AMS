@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    tools:context="com.example.CapacitiCheckIn.AdminActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="274dp"
+        android:layout_height="115dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205"
+        app:srcCompat="@drawable/logo" />
+
+
+    <TextView
+        android:id="@+id/adminText"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/monoton"
+        android:text="@string/admin"
+        android:textAlignment="center"
+        android:textColor="#1D2951"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+
+        android:id="@+id/viewAttedenceBtn"
+        android:layout_width="237dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+
+        android:backgroundTint="#1D2951"
+        android:text="@string/view_attendance"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAtt"
+        tools:targetApi="lollipop" />
+
+    <Button
+
+        android:id="@+id/viewSkillsAttendance"
+        android:layout_width="237dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#1D2951"
+        android:text="@string/view_skills_attendance"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:targetApi="lollipop" />
+
+    <Button
+
+        android:id="@+id/viewLearneshipBtn"
+        android:layout_width="237dp"
+        android:layout_height="41dp"
+
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#1D2951"
+        android:text="@string/view_learneship_attendance"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:targetApi="lollipop" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="352dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="158dp" />
+
+    <TextView
+        android:id="@+id/textViewAtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/to_view_the_overall_attendance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addEmailBtn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/to_view_only_the_skills_attendance"
+        app:layout_constraintEnd_toEndOf="@+id/viewAttedenceBtn"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="@+id/viewAttedenceBtn"
+        app:layout_constraintTop_toBottomOf="@+id/viewAttedenceBtn" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="267dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/to_view_only_the_learnerships_attendance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSkillsAttendance" />
+
+    <EditText
+        android:id="@+id/addEmailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="104dp"
+        android:autofillHints=""
+        android:background="#E8F0FE"
+        android:ems="10"
+        android:hint="@string/add_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="233dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/if_you_want_to_add_a_new_user"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminText" />
+
+    <Button
+        android:id="@+id/addEmailBtn"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#1D2951"
+        android:text="@string/add"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/addEmailTxt"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/addEmailTxt"
+        app:layout_constraintTop_toBottomOf="@+id/addEmailTxt"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="4dp"
+        android:background="#F80000"
+        android:text="@string/reset"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="147dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="12dp"
+
+        android:text="@string/to_reset_all_the_added_values_after_taking_attendance"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLearneshipBtn" />
+
+    <Button
+        android:id="@+id/logOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="152dp"
+        android:backgroundTint="#1D2951"
+        android:text="@string/log_out"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reset"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/emailBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:contentDescription="@string/email_button"
+        android:focusable="true"
+        app:layout_constraintStart_toEndOf="@+id/addEmailTxt"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@android:drawable/sym_action_email" />
+
+    <ImageView
+        android:id="@+id/deleteEmails"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/deleteEmails"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/emailBtn"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/downloadBtn"-->
+    <!--        android:layout_width="237dp"-->
+    <!--        android:layout_height="41dp"-->
+    <!--        android:layout_marginBottom="128dp"-->
+    <!--        android:backgroundTint="#1D2951"-->
+    <!--        android:text="Download"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/guideline"-->
+    <!--        app:layout_constraintHorizontal_bias="0.86"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/viewLearneshipBtn" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

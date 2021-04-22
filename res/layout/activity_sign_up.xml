@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusableInTouchMode="false"
+    android:verticalScrollbarPosition="right"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/check_remember"
+        android:layout_width="301dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="#1D2951"
+        android:checked="true"
+        android:text="@string/i_agree_to_the_citi_terms_of_service_and_honor_code_required"
+        android:textColor="#1D2951"
+        android:textColorHighlight="#1D2951"
+        android:textColorLink="#1D2951"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/confirmPassword"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="@+id/confirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/takeAttedenceBtn"
+        android:layout_width="224dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#1D2951"
+        android:text="@string/register"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/check_remember"
+        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintStart_toStartOf="@+id/check_remember"
+        app:layout_constraintTop_toBottomOf="@+id/check_remember"
+        tools:targetApi="lollipop" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="366dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="158dp" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="269dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:background="#E8F0FE"
+        android:duplicateParentState="false"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/intern"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/intern"
+        app:layout_constraintTop_toBottomOf="@+id/intern" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="269dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:background="#E8F0FE"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="269dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="#E8F0FE"
+
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="274dp"
+        android:layout_height="115dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/alreadyCheckedIntxt"
+        android:layout_width="155dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/already_registered"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/takeAttedenceBtn"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/takeAttedenceBtn"
+        app:layout_constraintTop_toBottomOf="@+id/takeAttedenceBtn" />
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="194dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="4dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/monoton"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textColor="#1D2951"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:backgroundTint="#1D2951"
+        android:text="@string/sign_in"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/alreadyCheckedIntxt"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/alreadyCheckedIntxt"
+        app:layout_constraintTop_toBottomOf="@+id/alreadyCheckedIntxt"
+        app:layout_constraintVertical_bias="0.0"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/intern"
+        android:layout_width="227dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/intern"
+        android:textColor="#1C1B1B"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/registerText"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="@+id/registerText"
+        app:layout_constraintTop_toBottomOf="@+id/registerText" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="TextView"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
